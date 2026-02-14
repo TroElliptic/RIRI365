@@ -1,22 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>365 Days of Love</title>
+  <title>Shiams Love for Rianna ❤️</title>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 100px;
+
+      /* Romantic gradient background */
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: white;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.15);
+      padding: 40px;
+      border-radius: 20px;
+      width: 80%;
+      max-width: 500px;
+      margin: auto;
+      backdrop-filter: blur(10px);
+    }
+  </style>
 </head>
-<body style="font-family: sans-serif; text-align: center; margin-top: 100px;">
-  <h1>❤️ 365 Days of Love ❤️</h1>
-  <p id="message"></p>
+
+<body>
+  <div class="card">
+    <h1>❤️ 365 Days of Love ❤️</h1>
+    <p id="message"></p>
+  </div>
 
   <script>
     const messages = [
       "You are the best thing in my life ❤️",
-      "I love your smile more every day 😊",
-      "You make my world brighter ☀️"
+      "Every day with you is my favourite day.",
+      "You make my world brighter.",
+      "I fall in love with you again every day my cutiepie"
+      // Add all 365 here
     ];
 
-    const startDate = new Date("2026-02-14"); 
+    const startDate = new Date("2026-02-14");
     const today = new Date();
-    const diff = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+
+    const diff = Math.floor(
+      (today - startDate) / (1000 * 60 * 60 * 24)
+    );
 
     document.getElementById("message").innerText =
       messages[diff] || "I love you forever ❤️";
