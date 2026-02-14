@@ -48,9 +48,9 @@
     const startDate = new Date("2026-02-14");
     const today = new Date();
 
-    const diff = Math.floor(
-      (today - startDate) / (1000 * 60 * 60 * 24)
-    );
+  const diff = Math.max(0, Math.floor(
+  (today - startDate) / (1000 * 60 * 60 * 24)
+));
 
     document.getElementById("message").innerText =
       messages[diff] || "I love you forever ❤️";
