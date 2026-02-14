@@ -44,16 +44,19 @@ body {
   position: absolute;
   bottom: -20px;
   font-size: 20px;
-  animation: floatUp linear infinite;
+  pointer-events: none;
+  animation-name: floatUp;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
 }
 
 @keyframes floatUp {
-  from {
-    transform: translateY(0);
+   0% {
+    transform: translate(0, 0) rotate(0deg);
     opacity: 1;
   }
-  to {
-    transform: translateY(-110vh);
+  100% {
+    transform: translate(var(--x), -110vh) rotate(var(--rot));
     opacity: 0;
   }
 }
