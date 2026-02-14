@@ -39,8 +39,8 @@ body {
   pointer-events: none;
 }
 
-.hearts.left { left: 0; }
-.hearts.right { right: 0; }
+.hearts.left { left: calc(50% - 270px); }  /* slightly left of card */
+.hearts.right { right: calc(50% - 270px); } /* slightly right of card */
 
 .heart {
   position: absolute;
