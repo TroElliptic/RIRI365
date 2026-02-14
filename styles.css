@@ -24,8 +24,8 @@ body {
   font-weight: bold;
   font-size: 22px;
   text-shadow:
-    -15px -15px 5 black,
-     15px -15px 5 black,
-    -15px  15px 5 black,
-     15px  15px 5 black;
+    0px 0px 5 black,
+     0px 0px 5 black,
+    0px 0px 5 black,
+     0px 0px 5 black;
 }
