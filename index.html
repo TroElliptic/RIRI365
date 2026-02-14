@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>365 Days of Love</title>
+</head>
+<body style="font-family: sans-serif; text-align: center; margin-top: 100px;">
+  <h1>❤️ 365 Days of Love ❤️</h1>
+  <p id="message"></p>
+
+  <script>
+    const messages = [
+      "You are the best thing in my life ❤️",
+      "I love your smile more every day 😊",
+      "You make my world brighter ☀️"
+    ];
+
+    const startDate = new Date("2026-02-14"); 
+    const today = new Date();
+    const diff = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+
+    document.getElementById("message").innerText =
+      messages[diff] || "I love you forever ❤️";
+  </script>
+</body>
+</html>
