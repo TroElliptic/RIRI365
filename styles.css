@@ -40,7 +40,7 @@ body {
 }
 
 .hearts.left { left: calc(50% - 50px); }  /* slightly left of card */
-.hearts.right { right: calc(50% - 1600px); } /* slightly right of card */
+.hearts.right { right: calc(50% - 800px); } /* slightly right of card */
 
 .heart {
   position: absolute;
