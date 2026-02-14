@@ -34,7 +34,7 @@ body {
 .hearts {
   position: fixed;
   bottom: 0;
-  width: 50px;
+  width: 60px;
   height: 100%;
   pointer-events: none;
   z-index: 0;
