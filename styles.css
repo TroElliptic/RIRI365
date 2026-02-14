@@ -37,15 +37,19 @@ body {
   width: 50px;
   height: 100%;
   pointer-events: none;
+  z-index: 0;
 }
 
-.hearts.left { left: calc(50% - 800px); }  /* slightly left of card */
-.hearts.right { right: calc(50% - 800px); } /* slightly right of card */
+
+.hearts.left { left: 0; }
+.hearts.right { right: 0; }
 
 .heart {
-  position: absolute;
+   position: absolute;
   bottom: 0;
-  animation: floatUp 7s linear forwards;
+  animation-name: floatUp;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
 }
 
 /* Heart animation - vertical up with slight horizontal wiggle */
