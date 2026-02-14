@@ -39,7 +39,7 @@ body {
   pointer-events: none;
 }
 
-.hearts.left { left: calc(50% - 200px); }  /* slightly left of card */
+.hearts.left { left: calc(50% - 800px); }  /* slightly left of card */
 .hearts.right { right: calc(50% - 800px); } /* slightly right of card */
 
 .heart {
