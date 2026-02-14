@@ -7,6 +7,9 @@
 
 <body>
 
+  <div class="hearts left"></div>
+  <div class="hearts right"></div>
+  
   <div class="card">
     <h1>❤️ 365 Days of Love ❤️</h1>
     <p id="message"></p>
@@ -59,7 +62,26 @@
       messages[diff] || "I love you forever ❤️";
   </script>
 
+<script>
+    function createHeart(containerSelector) {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerText = "❤️";
 
+      // Random size
+      heart.style.fontSize = 15 + Math.random() * 20 + "px";
+
+      document.querySelector(containerSelector).appendChild(heart);
+
+      // Remove after animation
+      setTimeout(() => heart.remove(), 7000);
+    }
+
+    // Spawn hearts left
+    setInterval(() => createHeart(".hearts.left"), 500);
+    // Spawn hearts right
+    setInterval(() => createHeart(".hearts.right"), 500);
+  </script>
 
   
 </body>
