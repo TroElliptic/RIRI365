@@ -9,11 +9,14 @@
 
   <div class="hearts left"></div>
   <div class="hearts right"></div>
+
+
   
   <div class="card">
     <h1>❤️ 365 Days of Love ❤️</h1>
     <p id="message"></p>
     <h2>check tomorrow for your daily love messege</h2>
+    <p id="countdown"></p>
   </div>
 
 
@@ -48,7 +51,8 @@
       "They see me rolling, to ri house",
       "Is it hot in here or is that you",
       "You are the WORLD TO ME",
-      "You being alive is a blessing"
+      "You being alive is a blessing",
+      "Everyday you get prittier and prittier"
       
       
       // Add all 365 here
@@ -92,6 +96,29 @@ setInterval(() => createHeart(".hearts.left"), 500);
 setInterval(() => createHeart(".hearts.right"), 500);
 
   </script>
+
+  <script>
+function updateCountdown() {
+  const now = new Date();
+
+  // Next midnight
+  const tomorrow = new Date();
+  tomorrow.setHours(24, 0, 0, 0);
+
+  const diff = tomorrow - now;
+
+  const hours = Math.floor(diff / (1000 * 60 * 60));
+  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+  const seconds = Math.floor((diff / 1000) % 60);
+
+  document.getElementById("countdown").innerText =
+    `Next message in ${hours}h ${minutes}m ${seconds}s`;
+}
+
+// Update every second
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
 
   
 </body>
