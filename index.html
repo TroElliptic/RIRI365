@@ -15,9 +15,15 @@
   <div class="card">
     <h1>❤️ 365 Days of Love ❤️</h1>
     <p id="message"></p>
-    <h2>check tomorrow for your daily love messege</h2>
+    <h2>check tomorrow for your daily love message </h2>
     <p id="countdown"></p>
     <button id="peek">Sneak Peak Tomorrows messege? 👀</button> 
+     <div id="note" onclick="flipNote()">
+      <div class="note-inner">
+        <div class="note-front">💌 Tap for a reason I love you</div>
+        <div class="note-back" id="reason"></div>
+      </div>
+    </div>
   </div>
 
 
@@ -166,6 +172,33 @@ updateCountdown();
     document.getElementById("peek").onclick = () => {
       document.getElementById("message").innerText = "NO PEEKING CUTIE!! Wait for tomorrow 😤❤️";
     };
+  </script>
+
+
+  <script>
+    const reasons = [
+      "Because you make me laugh like no one else 😂",
+      "Because your hugs fix everything 🤗",
+      "Because you're stupidly pretty 😍",
+      "Because you put up with my silliness 🥹",
+      "Because you make ordinary days feel special ✨",
+      "Because your smile is my favourite view 😊",
+      "Because you make me want to be better 💪",
+      "Because you're my best friend AND my love 💕",
+      "Because the world is better with you in it 🌍",
+      "Because you're MY mushroom 🍄"
+    ];
+
+    let flipped = false;
+    function flipNote() {
+      const note = document.getElementById("note");
+      if (!flipped) {
+        document.getElementById("reason").innerText =
+          reasons[Math.floor(Math.random() * reasons.length)];
+      }
+      note.classList.toggle("flipped");
+      flipped = !flipped;
+    }
   </script>
 
   
