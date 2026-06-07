@@ -17,6 +17,7 @@
     <p id="message"></p>
     <h2>check tomorrow for your daily love messege</h2>
     <p id="countdown"></p>
+    <button id="peek">No peeking! 👀</button> 
   </div>
 
 
@@ -160,6 +161,12 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 updateCountdown();
 </script>
+
+   <script>
+    document.getElementById("peek").onclick = () => {
+      document.getElementById("message").innerText = "NO PEEKING CUTIE!! Wait for tomorrow 😤❤️";
+    };
+  </script>
 
   
 </body>
